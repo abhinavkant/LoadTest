@@ -1,0 +1,44 @@
+services:
+  app1:
+    image: sampleapp:latest
+    # restart: always
+    environment:
+      ASPNETCORE_URLS: "http://+:8080"
+      ASPNETCORE_ENVIRONMENT: "Development"
+
+  app2:
+    image: sampleapp:latest
+    # restart: always
+    environment:
+      ASPNETCORE_URLS: "http://+:8080"
+      ASPNETCORE_ENVIRONMENT: "Development"
+
+  app3:
+    image: sampleapp:latest
+    # restart: always
+    environment:
+      ASPNETCORE_URLS: "http://+:8080"
+      ASPNETCORE_ENVIRONMENT: "Development"
+
+  app4:
+    image: sampleapp:latest
+    # restart: always
+    environment:
+      ASPNETCORE_URLS: "http://+:8080"
+      ASPNETCORE_ENVIRONMENT: "Development"
+
+  nginx:
+    image: nginx
+    volumes:
+      - ./Conf/nginx/nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - 8080:8080
+    cpus: 2
+
+  haproxy:
+    image: haproxy
+    volumes:
+      - ./Conf/haproxy:/usr/local/etc/haproxy:ro
+    ports:
+      - 8081:8080
+      - 8404:8404
