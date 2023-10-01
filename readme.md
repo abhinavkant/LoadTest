@@ -9,7 +9,7 @@
 5. K6 to load test the aplication
 6. mkcert to create self sign certificate
 
-## Create Certificate
+## Create Self-Signed Certificate
 
 ```sh
 mkcert -pkcs12 local.host.dev localhost 127.0.0.1
