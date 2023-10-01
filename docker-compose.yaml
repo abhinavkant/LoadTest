@@ -3,29 +3,45 @@ services:
     image: sampleapp:latest
     # restart: always
     environment:
-      ASPNETCORE_URLS: "http://+:8080"
+      ASPNETCORE_URLS: "http://+;https://+;"
       ASPNETCORE_ENVIRONMENT: "Development"
+      ASPNETCORE_Kestrel__Certificates__Default__Password: changeit
+      ASPNETCORE_Kestrel__Certificates__Default__Path: /https/aspnetapp.pfx
+    volumes:
+      - ./Cert:/https:ro
 
   app2:
     image: sampleapp:latest
     # restart: always
     environment:
-      ASPNETCORE_URLS: "http://+:8080"
+      ASPNETCORE_URLS: "http://+;https://+;"
       ASPNETCORE_ENVIRONMENT: "Development"
+      ASPNETCORE_Kestrel__Certificates__Default__Password: changeit
+      ASPNETCORE_Kestrel__Certificates__Default__Path: /https/aspnetapp.pfx
+    volumes:
+      - ./Cert:/https:ro
 
   app3:
     image: sampleapp:latest
     # restart: always
     environment:
-      ASPNETCORE_URLS: "http://+:8080"
+      ASPNETCORE_URLS: "http://+;https://+;"
       ASPNETCORE_ENVIRONMENT: "Development"
+      ASPNETCORE_Kestrel__Certificates__Default__Password: changeit
+      ASPNETCORE_Kestrel__Certificates__Default__Path: /https/aspnetapp.pfx
+    volumes:
+      - ./Cert:/https:ro
 
   app4:
     image: sampleapp:latest
     # restart: always
     environment:
-      ASPNETCORE_URLS: "http://+:8080"
+      ASPNETCORE_URLS: "http://+;https://+;"
       ASPNETCORE_ENVIRONMENT: "Development"
+      ASPNETCORE_Kestrel__Certificates__Default__Password: changeit
+      ASPNETCORE_Kestrel__Certificates__Default__Path: /https/aspnetapp.pfx
+    volumes:
+      - ./Cert:/https:ro
 
   nginx:
     image: nginx
