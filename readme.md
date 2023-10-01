@@ -7,6 +7,7 @@
 3. Docker to contanarized the project
 4. Docker compose to execute everything
 5. K6 to load test the aplication
+6. mkcert to create self sign certificate
 
 ## Create Certificate
 
