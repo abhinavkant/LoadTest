@@ -69,8 +69,6 @@ services:
       - 9090:9090
     volumes:
       - ./Monitor/Prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
-      - ./Cert/rootCA.pem:/https/rootCA.pem:ro
-      - ./Cert/rootCA-key.pem:/https/rootCA-key.pem:ro
       - prometheus-data:/prometheus
 
 volumes:
