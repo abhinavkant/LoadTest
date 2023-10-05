@@ -71,5 +71,14 @@ services:
       - ./Monitor/Prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
       - prometheus-data:/prometheus
 
+  grafana:
+    image: grafana/grafana-oss
+    ports:
+      - 3000:3000
+    restart: unless-stopped
+    volumes:
+      - 'grafana_storage:/var/lib/grafana'
+
 volumes:
   prometheus-data:
+  grafana_storage: {}
