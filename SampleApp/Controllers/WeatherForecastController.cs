@@ -1,4 +1,3 @@
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace SampleApp.Controllers;
@@ -19,8 +18,8 @@ public class WeatherForecastController : ControllerBase
         _logger = logger;
     }
 
+    // [Authorize]
     [HttpGet(Name = "GetWeatherForecast")]
-    [Authorize]
     public async Task<IEnumerable<WeatherForecast>> Get()
     {
         return await Task.FromResult(Enumerable.Range(1, 5).Select(index => new WeatherForecast

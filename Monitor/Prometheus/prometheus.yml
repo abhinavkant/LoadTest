@@ -1,0 +1,19 @@
+global:
+  scrape_interval: 30s
+  scrape_timeout: 30s
+
+rule_files:
+#  - "alerts.yml"
+scrape_configs:
+  - job_name: SampleLoadTestApp
+    metrics_path: /metrics
+    tls_config:
+      # cert_file: /https/rootCA.pem
+      # key_file: /https/rootCA-key.pem
+      insecure_skip_verify: true
+    static_configs:
+      - targets:
+          - "app1:80"
+          - "app2:80"
+          - "app3:80"
+          - "app4:80"

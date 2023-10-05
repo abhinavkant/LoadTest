@@ -23,4 +23,6 @@ mv .\local.host.dev+2.p12 .\aspnetapp1.pfx
 
 - https://webhostinggeeks.com/howto/how-to-enable-tls-1-3-in-haproxy/
 - https://webhostinggeeks.com/howto/how-to-configure-haproxy-with-ssl-pass-through/
+- https://webhostinggeeks.com/howto/how-to-enable-tls-1-3-in-haproxy/
+- https://serversforhackers.com/c/using-ssl-certificates-with-haproxy
 
